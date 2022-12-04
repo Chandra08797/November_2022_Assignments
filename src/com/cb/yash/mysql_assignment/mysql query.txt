@@ -1,0 +1,51 @@
+Question 1- query:- select *from employee where salary>300000;
+
+Question 2- query:- select *from employee where department !="it";
+
+Question 3- query:- select *from employee where department = "it" || "testing";
+
+Question 4- query:- select * from employee ORDER BY salary DESC;
+
+Question 5- query:- CREATE TABLE `employee` (
+  				`id` int DEFAULT NULL,
+  				`name` varchar(30) DEFAULT NULL,
+ 				 `designation` varchar(45) DEFAULT NULL,
+  				`salary` bigint DEFAULT NULL,
+ 				 `address` varchar(45) DEFAULT NULL,
+  				`department` varchar(45) DEFAULT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+Question 6- query :- select *from employee where salary=(select MAX(salary) from employee);
+		  :- select *from employee where salary=(select MIN(salary) from employee);
+
+Question 6- query :- select *from employee HAVING COUNT(id)>=2;
+
+
+Question 7- query :- create database newdb;
+		     use newdb;
+                     CREATE TABLE `employee` (
+  				`id` int DEFAULT NULL,
+  				`name` varchar(30) DEFAULT NULL,
+ 				 `designation` varchar(45) DEFAULT NULL,
+  				`salary` bigint DEFAULT NULL,
+ 				 `address` varchar(45) DEFAULT NULL,
+  				`department` varchar(45) DEFAULT NULL
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+                     select *from table [table_name];
+                     desc table [table_name];
+                     drop table [table_name];
+
+Question 8- query :-  select *from employee where designation = "manager" && salary BETWEEN 200000 AND 300000;
+
+Question 9- query :-  update employee set salary=20000 where department="account";
+
+Question 10- query :- alter table employee ADD COLUMN doj VARCHAR(15) AFTER department;
+
+Question 11- query :- alter table employee RENAME TO employees;
+
+Question 12- query :- select *from employees where name!=null;
+
+Question 13- query :-  select *from employees where name = ANY
+    			(select name from employees where name="alex");
+
+
